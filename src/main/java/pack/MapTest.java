@@ -20,34 +20,44 @@ public class MapTest {
         if (result>=1)
             logger.info("Совпадений: "+ result);
         else{
-            logger.error("Совпадений нет, ошибка");
+            logger.error("Совпадений нет");
             fails++;
         }
     }
     public static void countElementsInMap(){
         CompareObjectsTest.separate();
         int result;
+        logger.info("Передаем в HashMap человека Дмитров Алексей");
         result=Map.countElementsInMap("Дмитров","Алексей");
         Search(result);
+        logger.info("Передаем в HashMap человека Дмитров Алексей");
         result=Map.countElementsInMap("Дмитров","Алексей");
         Search(result);
+        logger.info("Передаем в HashMap человека Ерохин Сергей");
         result=Map.countElementsInMap("Ерохин","Сергей");
         Search(result);
+        logger.info("Передаем в HashMap человека Ярмолов Алексей");
         result=Map.countElementsInMap("Ярмолов","Алексей");
         Search(result);
+        logger.info("Передаем в HashMap человека Карасев Дмитрий");
         result=Map.countElementsInMap("Карасев","Дмитрий");
         Search(result);
+        logger.info("Передаем в HashMap человека Ерохин Сергей");
         result=Map.countElementsInMap("Ерохин","Сергей");
         Search(result);
+        logger.info("Передаем в HashMap человека Андреев Андрей");
         result=Map.countElementsInMap("Андреев","Андрей");
         Search(result);
+        logger.info("Передаем в HashMap человека Смирнов Владимир");
         result=Map.countElementsInMap("Смирнов","Владимир");
         Search(result);
+        logger.info("Передаем в HashMap человека Ерохин Сергей");
         result=Map.countElementsInMap("Ерохин","Сергей");
         Search(result);
+        logger.info("Передаем в HashMap человека Андреев Андрей");
         result=Map.countElementsInMap("Андреев","Андрей");
         Search(result);
-        logger.warn("Ошибок во время поиска: "+ fails);
+        logger.warn("Нулевых совпадений во время поиска: "+ fails);
         // убрал пробелы в ключе и значении,ключ в hashmap уникальный, не годится для имен и фамилий с повторами
     }
     public static void Delete(HashMap map,String value){
@@ -81,7 +91,10 @@ public class MapTest {
         String value3 = "dd";  //выдает ошибку
         String value4 = "hh";  //все работает
 
+        CompareObjectsTest.separate();
         HashMap();
+        logger.info("Имеется следущая HashMap");
+        logger.info(map);
         Delete(map,value1);
         HashMap();
         Delete(map,value2);
